@@ -19,6 +19,32 @@
 		229D2F0E2BF8D7FB0080C118 /* MoodCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229D2F0D2BF8D7FB0080C118 /* MoodCarousel.swift */; };
 		229D2F122BF8DF930080C118 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229D2F112BF8DF930080C118 /* CalendarView.swift */; };
 		229D2F152BF8DFBC0080C118 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229D2F142BF8DFBC0080C118 /* Date+Extension.swift */; };
+		229D2F192BF8F7ED0080C118 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229D2F182BF8F7ED0080C118 /* ChatView.swift */; };
+		229D2F1C2BF8F8A30080C118 /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = 229D2F1B2BF8F8A30080C118 /* GoogleGenerativeAI */; };
+		229D2F1E2BF8F9CD0080C118 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 229D2F1D2BF8F9CD0080C118 /* GoogleService-Info.plist */; };
+		229D2F212BF8FA1C0080C118 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 229D2F202BF8FA1C0080C118 /* FirebaseAnalytics */; };
+		229D2F232BF8FA1C0080C118 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 229D2F222BF8FA1C0080C118 /* FirebaseAnalyticsOnDeviceConversion */; };
+		229D2F252BF8FA1C0080C118 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 229D2F242BF8FA1C0080C118 /* FirebaseAnalyticsSwift */; };
+		229D2F272BF8FA1C0080C118 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 229D2F262BF8FA1C0080C118 /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		229D2F292BF8FA1C0080C118 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 229D2F282BF8FA1C0080C118 /* FirebaseAppCheck */; };
+		229D2F2C2BF8FB3D0080C118 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229D2F2B2BF8FB3D0080C118 /* MessageCell.swift */; };
+		229D2F2E2BF8FB4D0080C118 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229D2F2D2BF8FB4D0080C118 /* MessageView.swift */; };
+		229D2F322BF90EBA0080C118 /* Message.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 229D2F302BF90EBA0080C118 /* Message.xcdatamodeld */; };
+		229D2F342BF922650080C118 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229D2F332BF922650080C118 /* NetworkMonitor.swift */; };
+		229D2F362BF9228A0080C118 /* NetworkUnavailableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229D2F352BF9228A0080C118 /* NetworkUnavailableView.swift */; };
+		229D2F382BF922A60080C118 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229D2F372BF922A60080C118 /* PersistenceController.swift */; };
+		22CA4D722BF9FE89004F47E9 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 22CA4D712BF9FE89004F47E9 /* FirebaseFirestoreSwift */; };
+		22CA4D742BF9FEAF004F47E9 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 22CA4D732BF9FEAF004F47E9 /* FirebaseAuth */; };
+		22CA4D762BF9FF47004F47E9 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CA4D752BF9FF47004F47E9 /* Encodable.swift */; };
+		22CA4D782BFA1E16004F47E9 /* MoodsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CA4D772BFA1E16004F47E9 /* MoodsRow.swift */; };
+		22CA4D7B2BFA2C64004F47E9 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CA4D7A2BFA2C64004F47E9 /* CalendarViewModel.swift */; };
+		22CA4D7E2BFA2F59004F47E9 /* DayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CA4D7D2BFA2F59004F47E9 /* DayItem.swift */; };
+		22FC89792BF92E8B002E6400 /* EmojiShowerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FC89782BF92E8B002E6400 /* EmojiShowerView.swift */; };
+		22FC897B2BF92EA9002E6400 /* EmojiShowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FC897A2BF92EA9002E6400 /* EmojiShowerViewController.swift */; };
+		22FC897E2BF93033002E6400 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 22FC897D2BF93033002E6400 /* ConfettiSwiftUI */; };
+		22FC89822BF9F807002E6400 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FC89812BF9F807002E6400 /* AppViewModel.swift */; };
+		22FC89842BF9F8CF002E6400 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FC89832BF9F8CF002E6400 /* User.swift */; };
+		22FC89862BF9F955002E6400 /* MoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FC89852BF9F955002E6400 /* MoodItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +61,23 @@
 		229D2F0D2BF8D7FB0080C118 /* MoodCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodCarousel.swift; sourceTree = "<group>"; };
 		229D2F112BF8DF930080C118 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		229D2F142BF8DFBC0080C118 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		229D2F182BF8F7ED0080C118 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		229D2F1D2BF8F9CD0080C118 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		229D2F2B2BF8FB3D0080C118 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		229D2F2D2BF8FB4D0080C118 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		229D2F312BF90EBA0080C118 /* Message.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Message.xcdatamodel; sourceTree = "<group>"; };
+		229D2F332BF922650080C118 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		229D2F352BF9228A0080C118 /* NetworkUnavailableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUnavailableView.swift; sourceTree = "<group>"; };
+		229D2F372BF922A60080C118 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		22CA4D752BF9FF47004F47E9 /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
+		22CA4D772BFA1E16004F47E9 /* MoodsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodsRow.swift; sourceTree = "<group>"; };
+		22CA4D7A2BFA2C64004F47E9 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
+		22CA4D7D2BFA2F59004F47E9 /* DayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayItem.swift; sourceTree = "<group>"; };
+		22FC89782BF92E8B002E6400 /* EmojiShowerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiShowerView.swift; sourceTree = "<group>"; };
+		22FC897A2BF92EA9002E6400 /* EmojiShowerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiShowerViewController.swift; sourceTree = "<group>"; };
+		22FC89812BF9F807002E6400 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		22FC89832BF9F8CF002E6400 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		22FC89852BF9F955002E6400 /* MoodItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +85,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				229D2F252BF8FA1C0080C118 /* FirebaseAnalyticsSwift in Frameworks */,
+				229D2F272BF8FA1C0080C118 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				229D2F212BF8FA1C0080C118 /* FirebaseAnalytics in Frameworks */,
+				229D2F232BF8FA1C0080C118 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
+				22CA4D742BF9FEAF004F47E9 /* FirebaseAuth in Frameworks */,
+				229D2F292BF8FA1C0080C118 /* FirebaseAppCheck in Frameworks */,
+				229D2F1C2BF8F8A30080C118 /* GoogleGenerativeAI in Frameworks */,
+				22FC897E2BF93033002E6400 /* ConfettiSwiftUI in Frameworks */,
+				22CA4D722BF9FE89004F47E9 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +105,7 @@
 			children = (
 				229D2EE82BF7BF7D0080C118 /* moodjournal */,
 				229D2EE72BF7BF7D0080C118 /* Products */,
+				22CA4D702BF9FE89004F47E9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +127,7 @@
 				229D2EFB2BF8D2240080C118 /* Views */,
 				229D2EF92BF8D2190080C118 /* Models */,
 				229D2EED2BF7BF7F0080C118 /* Assets.xcassets */,
+				229D2F1D2BF8F9CD0080C118 /* GoogleService-Info.plist */,
 				229D2EEF2BF7BF7F0080C118 /* Preview Content */,
 			);
 			path = moodjournal;
@@ -90,6 +144,9 @@
 		229D2EF92BF8D2190080C118 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				229D2F302BF90EBA0080C118 /* Message.xcdatamodeld */,
+				22FC89832BF9F8CF002E6400 /* User.swift */,
+				22FC89852BF9F955002E6400 /* MoodItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -97,6 +154,8 @@
 		229D2EFB2BF8D2240080C118 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				22FC897F2BF9F7F3002E6400 /* App */,
+				229D2F162BF8F7E00080C118 /* Chat */,
 				229D2F0F2BF8DF830080C118 /* Calendar */,
 				229D2F092BF8D5320080C118 /* Settings */,
 				229D2EFD2BF8D2420080C118 /* Home */,
@@ -142,6 +201,7 @@
 			children = (
 				229D2F032BF8D2AF0080C118 /* WeekView.swift */,
 				229D2F0D2BF8D7FB0080C118 /* MoodCarousel.swift */,
+				22CA4D772BFA1E16004F47E9 /* MoodsRow.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -149,8 +209,11 @@
 		229D2F012BF8D2830080C118 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				22FC89772BF92E77002E6400 /* EmojiShower */,
 				229D2F132BF8DFAF0080C118 /* Extensions */,
 				229D2F022BF8D2870080C118 /* Components */,
+				229D2F332BF922650080C118 /* NetworkMonitor.swift */,
+				229D2F372BF922A60080C118 /* PersistenceController.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -182,6 +245,7 @@
 		229D2F0F2BF8DF830080C118 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				22CA4D792BFA2C4A004F47E9 /* ViewModel */,
 				229D2F102BF8DF890080C118 /* View */,
 			);
 			path = Calendar;
@@ -190,6 +254,7 @@
 		229D2F102BF8DF890080C118 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				22CA4D7C2BFA2F47004F47E9 /* Components */,
 				229D2F112BF8DF930080C118 /* CalendarView.swift */,
 			);
 			path = View;
@@ -199,8 +264,84 @@
 			isa = PBXGroup;
 			children = (
 				229D2F142BF8DFBC0080C118 /* Date+Extension.swift */,
+				22CA4D752BF9FF47004F47E9 /* Encodable.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		229D2F162BF8F7E00080C118 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				229D2F172BF8F7E40080C118 /* View */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		229D2F172BF8F7E40080C118 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				229D2F2A2BF8FB320080C118 /* Components */,
+				229D2F182BF8F7ED0080C118 /* ChatView.swift */,
+				229D2F352BF9228A0080C118 /* NetworkUnavailableView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		229D2F2A2BF8FB320080C118 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				229D2F2B2BF8FB3D0080C118 /* MessageCell.swift */,
+				229D2F2D2BF8FB4D0080C118 /* MessageView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		22CA4D702BF9FE89004F47E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		22CA4D792BFA2C4A004F47E9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				22CA4D7A2BFA2C64004F47E9 /* CalendarViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		22CA4D7C2BFA2F47004F47E9 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				22CA4D7D2BFA2F59004F47E9 /* DayItem.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		22FC89772BF92E77002E6400 /* EmojiShower */ = {
+			isa = PBXGroup;
+			children = (
+				22FC89782BF92E8B002E6400 /* EmojiShowerView.swift */,
+				22FC897A2BF92EA9002E6400 /* EmojiShowerViewController.swift */,
+			);
+			path = EmojiShower;
+			sourceTree = "<group>";
+		};
+		22FC897F2BF9F7F3002E6400 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				22FC89802BF9F7F8002E6400 /* AppViewModel */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		22FC89802BF9F7F8002E6400 /* AppViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				22FC89812BF9F807002E6400 /* AppViewModel.swift */,
+			);
+			path = AppViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +360,17 @@
 			dependencies = (
 			);
 			name = moodjournal;
+			packageProductDependencies = (
+				229D2F1B2BF8F8A30080C118 /* GoogleGenerativeAI */,
+				229D2F202BF8FA1C0080C118 /* FirebaseAnalytics */,
+				229D2F222BF8FA1C0080C118 /* FirebaseAnalyticsOnDeviceConversion */,
+				229D2F242BF8FA1C0080C118 /* FirebaseAnalyticsSwift */,
+				229D2F262BF8FA1C0080C118 /* FirebaseAnalyticsWithoutAdIdSupport */,
+				229D2F282BF8FA1C0080C118 /* FirebaseAppCheck */,
+				22FC897D2BF93033002E6400 /* ConfettiSwiftUI */,
+				22CA4D712BF9FE89004F47E9 /* FirebaseFirestoreSwift */,
+				22CA4D732BF9FEAF004F47E9 /* FirebaseAuth */,
+			);
 			productName = moodjournal;
 			productReference = 229D2EE62BF7BF7D0080C118 /* moodjournal.app */;
 			productType = "com.apple.product-type.application";
@@ -247,6 +399,11 @@
 				Base,
 			);
 			mainGroup = 229D2EDD2BF7BF7D0080C118;
+			packageReferences = (
+				229D2F1A2BF8F8A30080C118 /* XCRemoteSwiftPackageReference "generative-ai-swift" */,
+				229D2F1F2BF8FA1C0080C118 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				22FC897C2BF93033002E6400 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
+			);
 			productRefGroup = 229D2EE72BF7BF7D0080C118 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -263,6 +420,7 @@
 			files = (
 				229D2EF12BF7BF7F0080C118 /* Preview Assets.xcassets in Resources */,
 				229D2EEE2BF7BF7F0080C118 /* Assets.xcassets in Resources */,
+				229D2F1E2BF8F9CD0080C118 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,16 +431,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22CA4D762BF9FF47004F47E9 /* Encodable.swift in Sources */,
+				229D2F362BF9228A0080C118 /* NetworkUnavailableView.swift in Sources */,
 				229D2F0C2BF8D5420080C118 /* SettingsView.swift in Sources */,
+				22CA4D7E2BFA2F59004F47E9 /* DayItem.swift in Sources */,
 				229D2F042BF8D2AF0080C118 /* WeekView.swift in Sources */,
+				22CA4D7B2BFA2C64004F47E9 /* CalendarViewModel.swift in Sources */,
 				229D2F0E2BF8D7FB0080C118 /* MoodCarousel.swift in Sources */,
+				229D2F322BF90EBA0080C118 /* Message.xcdatamodeld in Sources */,
 				229D2EEC2BF7BF7D0080C118 /* ContentView.swift in Sources */,
+				229D2F192BF8F7ED0080C118 /* ChatView.swift in Sources */,
+				22FC897B2BF92EA9002E6400 /* EmojiShowerViewController.swift in Sources */,
+				229D2F2E2BF8FB4D0080C118 /* MessageView.swift in Sources */,
+				229D2F342BF922650080C118 /* NetworkMonitor.swift in Sources */,
+				22CA4D782BFA1E16004F47E9 /* MoodsRow.swift in Sources */,
+				22FC89822BF9F807002E6400 /* AppViewModel.swift in Sources */,
+				229D2F2C2BF8FB3D0080C118 /* MessageCell.swift in Sources */,
+				229D2F382BF922A60080C118 /* PersistenceController.swift in Sources */,
 				229D2EF82BF7BF9A0080C118 /* CalendarWeekListView.swift in Sources */,
 				229D2F152BF8DFBC0080C118 /* Date+Extension.swift in Sources */,
+				22FC89792BF92E8B002E6400 /* EmojiShowerView.swift in Sources */,
 				229D2F122BF8DF930080C118 /* CalendarView.swift in Sources */,
 				229D2F062BF8D4720080C118 /* HomeView.swift in Sources */,
 				229D2F082BF8D4BE0080C118 /* HomeViewModel.swift in Sources */,
 				229D2EEA2BF7BF7D0080C118 /* moodjournalApp.swift in Sources */,
+				22FC89842BF9F8CF002E6400 /* User.swift in Sources */,
+				22FC89862BF9F955002E6400 /* MoodItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +662,94 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		229D2F1A2BF8F8A30080C118 /* XCRemoteSwiftPackageReference "generative-ai-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/generative-ai-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.3;
+			};
+		};
+		229D2F1F2BF8FA1C0080C118 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.26.0;
+			};
+		};
+		22FC897C2BF93033002E6400 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/simibac/ConfettiSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		229D2F1B2BF8F8A30080C118 /* GoogleGenerativeAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 229D2F1A2BF8F8A30080C118 /* XCRemoteSwiftPackageReference "generative-ai-swift" */;
+			productName = GoogleGenerativeAI;
+		};
+		229D2F202BF8FA1C0080C118 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 229D2F1F2BF8FA1C0080C118 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		229D2F222BF8FA1C0080C118 /* FirebaseAnalyticsOnDeviceConversion */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 229D2F1F2BF8FA1C0080C118 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsOnDeviceConversion;
+		};
+		229D2F242BF8FA1C0080C118 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 229D2F1F2BF8FA1C0080C118 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		229D2F262BF8FA1C0080C118 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 229D2F1F2BF8FA1C0080C118 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		229D2F282BF8FA1C0080C118 /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 229D2F1F2BF8FA1C0080C118 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		22CA4D712BF9FE89004F47E9 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 229D2F1F2BF8FA1C0080C118 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		22CA4D732BF9FEAF004F47E9 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 229D2F1F2BF8FA1C0080C118 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		22FC897D2BF93033002E6400 /* ConfettiSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 22FC897C2BF93033002E6400 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
+			productName = ConfettiSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		229D2F302BF90EBA0080C118 /* Message.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				229D2F312BF90EBA0080C118 /* Message.xcdatamodel */,
+			);
+			currentVersion = 229D2F312BF90EBA0080C118 /* Message.xcdatamodel */;
+			path = Message.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 229D2EDE2BF7BF7D0080C118 /* Project object */;
 }

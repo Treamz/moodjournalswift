@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CalendarView: View {
+    @StateObject private var vm: CalendarViewModel = CalendarViewModel()
     @State private var color: Color = .orange
     @State private var date = Date.now
     let daysOfWeek = Date.capitalizedFirstLettersOfWeekdays
@@ -36,15 +37,7 @@ struct CalendarView: View {
                         Text("")
                     }
                     else {
-                        VStack {
-                            Text("+")
-                                .fontWeight(.bold)
-                                .foregroundStyle(.secondary)
-                                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,minHeight: 40)
-                                .background(Circle().foregroundStyle(Date.now.startOfDay == day.startOfDay ? .red.opacity(0.3) : color.opacity(0.3)))
-                            Text(day.formatted(.dateTime.day()))
-
-                        }
+                        DayItem(moods: vm.moods, color: color, day: day)
                         .onTapGesture {
                             // on tap gesture
                         }
@@ -57,6 +50,7 @@ struct CalendarView: View {
         .padding()
         .onAppear {
             days = date.calendarDisplayDays
+            vm.fetchMoods()
         }
         .onChange(of: date) { days = date.calendarDisplayDays
         }

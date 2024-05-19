@@ -6,27 +6,48 @@
 //
 
 import SwiftUI
-
+import FirebaseAuth
 struct ContentView: View {
+    @StateObject var viewModel = AppViewModel()
 
     var body: some View {
-        TabView {
-            HomeView()
-                .tabItem {
-                    Label("Me", systemImage: "person.circle")
+        Group {
+            if (viewModel.userSession == nil) {
+               Text("Not Loaded")
+                    .onAppear {
+                        Task {
+                            try await viewModel.signIn()
+                        }
+                    }
+            }
+            else {
+                TabView {
+                    HomeView()
+                        .tabItem {
+                            Label("Me", systemImage: "person.circle")
+                        }
+                   
+                    CalendarView()
+                        .tabItem {
+                            Label("Calendar", systemImage: "calendar.circle")
+                            
+                        }
+                    ChatView()
+                        .tabItem {
+                            Label("Chat", systemImage: "message.circle")
+                            
+                        }
+                    SettingsView()
+                        .tabItem {
+                            Label("Settings", systemImage: "gear")
+                            
+                        }
                 }
-            CalendarView()
-                .tabItem {
-                    Label("Calendar", systemImage: "calendar.circle")
-                    
-                }
-            SettingsView()
-                .tabItem {
-                    Label("Settings", systemImage: "gear")
-                    
-                }
+                .tint(.orange)
+               
+            }
         }
-        .tint(.orange)
+        
 
 
     }
