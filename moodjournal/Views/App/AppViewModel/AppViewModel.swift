@@ -30,4 +30,33 @@ class AppViewModel: ObservableObject {
 
         }
     }
+    
+    func signInWithApple() async throws {
+        do {
+            if(userSession!.isAnonymous) {
+                // User is anonymous
+               // let credential = AppleAuthPr.credential(withIDToken: idToken,
+//                                                               accessToken: authentication.accessToken)
+//                authLink(credentials: AuthCredential.)
+            }
+
+        } catch {
+            print("DEBUG: Failed to log in with error \(error.localizedDescription)")
+
+        }
+    }
+    
+    private func authLink(credentials: AuthCredential) async throws -> AuthDataResult? {
+        do {
+            guard let user = Auth.auth().currentUser else { return nil }
+            let result = try await user.link(with: credentials)
+            // TODO: Update user's displayName
+            self.userSession = result.user
+            return result
+        }
+        catch {
+            print("FirebaseAuthError: link(with:) failed, \(error)")
+            throw error
+        }
+    }
 }

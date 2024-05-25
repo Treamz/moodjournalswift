@@ -16,12 +16,12 @@ struct CalendarView: View {
     @State private var days: [Date] = []
     var body: some View {
         VStack {
-            LabeledContent("Calendar Color") {
-                ColorPicker("", selection: $color,supportsOpacity: false)
-            }
-            LabeledContent("Date / Time") {
-                DatePicker("", selection: $date)
-            }
+//            LabeledContent("Calendar Color") {
+//                ColorPicker("", selection: $color,supportsOpacity: false)
+//            }
+//            LabeledContent("Date / Time") {
+//                DatePicker("", selection: $date)
+//            }
             HStack {
                 ForEach(daysOfWeek.indices,id: \.self) { index in
                     Text(daysOfWeek[index])

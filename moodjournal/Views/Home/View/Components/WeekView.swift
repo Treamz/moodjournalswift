@@ -65,55 +65,55 @@ struct WeekView: View {
 //                                        .frame(maxWidth: .infinity)
                             },
                             title: { date in
-                                HStack {
-                                    Text(monthDayFormatter.string(from: selectedDay))
-                                        .font(.headline)
-                                        .padding(5)
-                                    Spacer()
-                                }
-                                .padding([.bottom, .leading], 10)
+//                                HStack {
+//                                    Text(monthDayFormatter.string(from: selectedDay))
+//                                        .font(.headline)
+//                                        .padding(5)
+//                                    Spacer()
+//                                }
+//                                .padding([.bottom, .leading], 10)
                             },
                             weekSwitcher: { date in
-                                Button {
-                                    withAnimation(.easeIn) {
-                                        guard let newDate = calendar.date(
-                                            byAdding: .weekOfMonth,
-                                            value: -1,
-                                            to: selectedDay
-                                        ) else {
-                                            return
-                                        }
-                                        
-                                        selectedDay = newDate
-                                    }
-                                } label: {
-                                    Label(
-                                        title: { Text("Previous") },
-                                        icon: { Image(systemName: "chevron.left") }
-                                    )
-                                        .labelStyle(IconOnlyLabelStyle())
-                                        .padding(.horizontal)
-                                }
-                                Button {
-                                    withAnimation(.easeIn) {
-                                        guard let newDate = calendar.date(
-                                            byAdding: .weekOfMonth,
-                                            value: 1,
-                                            to: selectedDay
-                                        ) else {
-                                            return
-                                        }
-                                        
-                                        selectedDay = newDate
-                                    }
-                                } label: {
-                                    Label(
-                                        title: { Text("Next") },
-                                        icon: { Image(systemName: "chevron.right") }
-                                    )
-                                        .labelStyle(IconOnlyLabelStyle())
-                                        .padding(.horizontal)
-                                }
+//                                Button {
+//                                    withAnimation(.easeIn) {
+//                                        guard let newDate = calendar.date(
+//                                            byAdding: .weekOfMonth,
+//                                            value: -1,
+//                                            to: selectedDay
+//                                        ) else {
+//                                            return
+//                                        }
+//                                        
+//                                        selectedDay = newDate
+//                                    }
+//                                } label: {
+//                                    Label(
+//                                        title: { Text("Previous") },
+//                                        icon: { Image(systemName: "chevron.left") }
+//                                    )
+//                                        .labelStyle(IconOnlyLabelStyle())
+//                                        .padding(.horizontal)
+//                                }
+//                                Button {
+//                                    withAnimation(.easeIn) {
+//                                        guard let newDate = calendar.date(
+//                                            byAdding: .weekOfMonth,
+//                                            value: 1,
+//                                            to: selectedDay
+//                                        ) else {
+//                                            return
+//                                        }
+//                                        
+//                                        selectedDay = newDate
+//                                    }
+//                                } label: {
+//                                    Label(
+//                                        title: { Text("Next") },
+//                                        icon: { Image(systemName: "chevron.right") }
+//                                    )
+//                                        .labelStyle(IconOnlyLabelStyle())
+//                                        .padding(.horizontal)
+//                                }
                             }
                         )
     }

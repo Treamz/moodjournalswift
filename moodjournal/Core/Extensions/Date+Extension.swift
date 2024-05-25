@@ -84,11 +84,13 @@ extension Date {
     }
     
     var startOfDay: Date {
-        Calendar.current.startOfDay(for: self)
+        let calendar = Calendar.current
+        return calendar.startOfDay(for: self)
     }
     
     var endOfDay: Date {
-        Calendar.current.date(byAdding: .day, value: 1, to: startOfDay)!.addingTimeInterval(-1)
-
+        let startOfDay = Calendar.current.startOfDay(for: self)
+        return Calendar.current.date(byAdding: DateComponents(day: 1, second: -1), to: startOfDay)!
     }
+    
 }

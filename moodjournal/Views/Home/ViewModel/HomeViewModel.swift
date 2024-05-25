@@ -12,8 +12,10 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 class HomeViewModel : ObservableObject {
     
-    @Published var moods: [MoodItem] = []
+    @Published var moods = [MoodItem]()
+
     @Published var dueDate = Date()
+    private var db = Firestore.firestore()
 
     
     func addMood(forDate date: Date, mood : String) async throws {
@@ -24,7 +26,7 @@ class HomeViewModel : ObservableObject {
         }
         let newUUID = UUID().uuidString
         
-        let newItem = MoodItem(id: newUUID, title: mood, date: dueDate.timeIntervalSince1970)
+        let newItem = MoodItem(id: newUUID, title: mood, date: date.timeIntervalSince1970)
         // Save to DB
         
         let db = Firestore.firestore()
@@ -33,28 +35,40 @@ class HomeViewModel : ObservableObject {
         
         do {
             try await db.collection("users").document(uId).collection("moods").document(newUUID).setData(newItem.asDictionary())
-            await getMoodByDate()
+            await getMoodByDate(byDate: date)
         }
         catch {
             print("ERROR: \(error.localizedDescription)")
         }
     }
     
-    func getMoodByDate() async {
-        let db = Firestore.firestore()
-        
+    func getMoodByDate(byDate date: Date) async {
         guard let userId = Auth.auth().currentUser?.uid else {return}
-        db.collection("users").document(userId).collection("moods").order(by: "date", descending: true).addSnapshotListener { (querySnapshot, error) in
-            if let error = error {
-                print("Error getting mood items: \(error)")
-                return
+//        let calendar = /*Calendar*/.current
+        let currentDate = date
+        
+        let startOfDay = currentDate.startOfDay
+        let endOfDay = currentDate.endOfDay
+        
+        print("Date \(currentDate)")
+        print("Start of date \(startOfDay)")
+        print("End of date \(endOfDay)")
+        let startTimestamp = startOfDay.timeIntervalSince1970
+        let endTimestamp = endOfDay.timeIntervalSince1970
+        
+        db.collection("users").document(userId).collection("moods")
+            .whereField("date", isGreaterThanOrEqualTo: startTimestamp)
+            .whereField("date", isLessThanOrEqualTo: endTimestamp)
+            .getDocuments { (querySnapshot, error) in
+                if let error = error {
+                    print("Error getting documents: \(error)")
+                } else {
+                    self.moods = querySnapshot?.documents.compactMap { document in
+                        try? document.data(as: MoodItem.self)
+                    } ?? []
+                    print(self.moods)
+                }
             }
-            
-            self.moods = querySnapshot?.documents.compactMap { document in
-                try? document.data(as: MoodItem.self)
-            } ?? []
-            print(self.moods)
-        }}
-
+    }
     
 }

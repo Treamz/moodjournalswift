@@ -21,21 +21,29 @@ struct HomeView: View {
     var body: some View {
         VStack {
             WeekView(calendar: Calendar(identifier: .gregorian), selectedDay: $selectedDay)
-            MoodCarousel(onDataChange: { newData in
-                counter += 1
-                Task {
-                    try await viewModel.addMood(forDate: Self.now, mood: newData)
-                }
-            })
     
             MoodsRow(moods: viewModel.moods)
             Spacer()
+            SnapCarousel(onDataChange: { newData in
+                counter += 1
+                print("newData \(newData)")
+                Task {
+                    try await viewModel.addMood(forDate: selectedDay, mood: newData)
+                }
+            })
+
                             
         }
         .confettiCannon(counter: $counter,confettis: [.text("❤️"), .text("💙"), .text("💚"), .text("🧡")],confettiSize: 40,openingAngle: Angle(degrees: 0), closingAngle: Angle(degrees: 360), radius: 200)
         .onAppear {
             Task {
-                await viewModel.getMoodByDate()
+                await viewModel.getMoodByDate(byDate: selectedDay)
+            }
+        }
+        .onChange(of: selectedDay) {
+            print(selectedDay)
+            Task {
+                await viewModel.getMoodByDate(byDate: selectedDay)
             }
         }
     }
