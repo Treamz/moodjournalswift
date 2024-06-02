@@ -11,4 +11,5 @@ struct MoodItem : Codable, Identifiable, Hashable{
     let id: String
     let title: String
     let date : TimeInterval
+    let note: String?
 }

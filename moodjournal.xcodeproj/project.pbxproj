@@ -42,6 +42,17 @@
 		22CA4D802BFA7384004F47E9 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CA4D7F2BFA7384004F47E9 /* CarouselView.swift */; };
 		22CA4D822BFA73D8004F47E9 /* EmojiItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CA4D812BFA73D8004F47E9 /* EmojiItem.swift */; };
 		22CA4D852C02082F004F47E9 /* AppleIdAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CA4D842C02082F004F47E9 /* AppleIdAuth.swift */; };
+		22CA4D8B2C0243FB004F47E9 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CA4D8A2C0243FB004F47E9 /* OnboardingView.swift */; };
+		22CA4D8E2C024434004F47E9 /* OnoboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CA4D8D2C024434004F47E9 /* OnoboardingPage.swift */; };
+		22CA4D902C02444D004F47E9 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CA4D8F2C02444D004F47E9 /* Onboarding.swift */; };
+		22CA4D922C02447B004F47E9 /* OnboardingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CA4D912C02447B004F47E9 /* OnboardingCardView.swift */; };
+		22CA4D952C0244FB004F47E9 /* StartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CA4D942C0244FB004F47E9 /* StartButtonView.swift */; };
+		22CA4D992C0B6806004F47E9 /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CA4D982C0B6806004F47E9 /* DayView.swift */; };
+		22CA4D9B2C0CA543004F47E9 /* EditNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CA4D9A2C0CA543004F47E9 /* EditNoteView.swift */; };
+		22CA4D9D2C0CA766004F47E9 /* FFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CA4D9C2C0CA766004F47E9 /* FFButton.swift */; };
+		22CA4D9F2C0CAE15004F47E9 /* EditNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CA4D9E2C0CAE15004F47E9 /* EditNoteViewModel.swift */; };
+		22CA4DA12C0CC828004F47E9 /* MoodTimeLineItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CA4DA02C0CC828004F47E9 /* MoodTimeLineItem.swift */; };
+		22CA4DA32C0CCB16004F47E9 /* TimeInterval+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CA4DA22C0CCB16004F47E9 /* TimeInterval+Extension.swift */; };
 		22FC89792BF92E8B002E6400 /* EmojiShowerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FC89782BF92E8B002E6400 /* EmojiShowerView.swift */; };
 		22FC897B2BF92EA9002E6400 /* EmojiShowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FC897A2BF92EA9002E6400 /* EmojiShowerViewController.swift */; };
 		22FC897E2BF93033002E6400 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 22FC897D2BF93033002E6400 /* ConfettiSwiftUI */; };
@@ -80,6 +91,18 @@
 		22CA4D812BFA73D8004F47E9 /* EmojiItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiItem.swift; sourceTree = "<group>"; };
 		22CA4D842C02082F004F47E9 /* AppleIdAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleIdAuth.swift; sourceTree = "<group>"; };
 		22CA4D862C020DCE004F47E9 /* moodjournal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = moodjournal.entitlements; sourceTree = "<group>"; };
+		22CA4D872C02362B004F47E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		22CA4D8A2C0243FB004F47E9 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		22CA4D8D2C024434004F47E9 /* OnoboardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnoboardingPage.swift; sourceTree = "<group>"; };
+		22CA4D8F2C02444D004F47E9 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		22CA4D912C02447B004F47E9 /* OnboardingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCardView.swift; sourceTree = "<group>"; };
+		22CA4D942C0244FB004F47E9 /* StartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButtonView.swift; sourceTree = "<group>"; };
+		22CA4D982C0B6806004F47E9 /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
+		22CA4D9A2C0CA543004F47E9 /* EditNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNoteView.swift; sourceTree = "<group>"; };
+		22CA4D9C2C0CA766004F47E9 /* FFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFButton.swift; sourceTree = "<group>"; };
+		22CA4D9E2C0CAE15004F47E9 /* EditNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNoteViewModel.swift; sourceTree = "<group>"; };
+		22CA4DA02C0CC828004F47E9 /* MoodTimeLineItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodTimeLineItem.swift; sourceTree = "<group>"; };
+		22CA4DA22C0CCB16004F47E9 /* TimeInterval+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Extension.swift"; sourceTree = "<group>"; };
 		22FC89782BF92E8B002E6400 /* EmojiShowerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiShowerView.swift; sourceTree = "<group>"; };
 		22FC897A2BF92EA9002E6400 /* EmojiShowerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiShowerViewController.swift; sourceTree = "<group>"; };
 		22FC89812BF9F807002E6400 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
@@ -127,6 +150,7 @@
 		229D2EE82BF7BF7D0080C118 /* moodjournal */ = {
 			isa = PBXGroup;
 			children = (
+				22CA4D872C02362B004F47E9 /* Info.plist */,
 				22CA4D862C020DCE004F47E9 /* moodjournal.entitlements */,
 				229D2EE92BF7BF7D0080C118 /* moodjournalApp.swift */,
 				229D2F012BF8D2830080C118 /* Core */,
@@ -162,6 +186,8 @@
 		229D2EFB2BF8D2240080C118 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				22CA4D962C0B67F5004F47E9 /* Day */,
+				22CA4D882C0243C9004F47E9 /* Onboarding */,
 				22FC897F2BF9F7F3002E6400 /* App */,
 				229D2F162BF8F7E00080C118 /* Chat */,
 				229D2F0F2BF8DF830080C118 /* Calendar */,
@@ -191,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				229D2F072BF8D4BE0080C118 /* HomeViewModel.swift */,
+				22CA4D9E2C0CAE15004F47E9 /* EditNoteViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -200,6 +227,7 @@
 			children = (
 				229D2F002BF8D2770080C118 /* Components */,
 				229D2F052BF8D4720080C118 /* HomeView.swift */,
+				22CA4D9A2C0CA543004F47E9 /* EditNoteView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -210,6 +238,7 @@
 				229D2F032BF8D2AF0080C118 /* WeekView.swift */,
 				229D2F0D2BF8D7FB0080C118 /* MoodCarousel.swift */,
 				22CA4D772BFA1E16004F47E9 /* MoodsRow.swift */,
+				22CA4DA02C0CC828004F47E9 /* MoodTimeLineItem.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -232,6 +261,7 @@
 				229D2EF72BF7BF9A0080C118 /* CalendarWeekListView.swift */,
 				22CA4D7F2BFA7384004F47E9 /* CarouselView.swift */,
 				22CA4D812BFA73D8004F47E9 /* EmojiItem.swift */,
+				22CA4D9C2C0CA766004F47E9 /* FFButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -276,6 +306,7 @@
 			children = (
 				229D2F142BF8DFBC0080C118 /* Date+Extension.swift */,
 				22CA4D752BF9FF47004F47E9 /* Encodable.swift */,
+				22CA4DA22C0CCB16004F47E9 /* TimeInterval+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -336,6 +367,58 @@
 				22CA4D842C02082F004F47E9 /* AppleIdAuth.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		22CA4D882C0243C9004F47E9 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				22CA4D8C2C024425004F47E9 /* Model */,
+				22CA4D892C0243CF004F47E9 /* View */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		22CA4D892C0243CF004F47E9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				22CA4D932C0244ED004F47E9 /* Components */,
+				22CA4D8A2C0243FB004F47E9 /* OnboardingView.swift */,
+				22CA4D912C02447B004F47E9 /* OnboardingCardView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		22CA4D8C2C024425004F47E9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				22CA4D8D2C024434004F47E9 /* OnoboardingPage.swift */,
+				22CA4D8F2C02444D004F47E9 /* Onboarding.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		22CA4D932C0244ED004F47E9 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				22CA4D942C0244FB004F47E9 /* StartButtonView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		22CA4D962C0B67F5004F47E9 /* Day */ = {
+			isa = PBXGroup;
+			children = (
+				22CA4D972C0B67FB004F47E9 /* View */,
+			);
+			path = Day;
+			sourceTree = "<group>";
+		};
+		22CA4D972C0B67FB004F47E9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				22CA4D982C0B6806004F47E9 /* DayView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		22FC89772BF92E77002E6400 /* EmojiShower */ = {
@@ -453,6 +536,8 @@
 				22CA4D762BF9FF47004F47E9 /* Encodable.swift in Sources */,
 				22CA4D822BFA73D8004F47E9 /* EmojiItem.swift in Sources */,
 				229D2F362BF9228A0080C118 /* NetworkUnavailableView.swift in Sources */,
+				22CA4D8B2C0243FB004F47E9 /* OnboardingView.swift in Sources */,
+				22CA4D9F2C0CAE15004F47E9 /* EditNoteViewModel.swift in Sources */,
 				229D2F0C2BF8D5420080C118 /* SettingsView.swift in Sources */,
 				22CA4D7E2BFA2F59004F47E9 /* DayItem.swift in Sources */,
 				229D2F042BF8D2AF0080C118 /* WeekView.swift in Sources */,
@@ -461,23 +546,32 @@
 				229D2F322BF90EBA0080C118 /* Message.xcdatamodeld in Sources */,
 				229D2EEC2BF7BF7D0080C118 /* ContentView.swift in Sources */,
 				229D2F192BF8F7ED0080C118 /* ChatView.swift in Sources */,
+				22CA4D922C02447B004F47E9 /* OnboardingCardView.swift in Sources */,
 				22FC897B2BF92EA9002E6400 /* EmojiShowerViewController.swift in Sources */,
 				229D2F2E2BF8FB4D0080C118 /* MessageView.swift in Sources */,
+				22CA4D902C02444D004F47E9 /* Onboarding.swift in Sources */,
 				229D2F342BF922650080C118 /* NetworkMonitor.swift in Sources */,
 				22CA4D802BFA7384004F47E9 /* CarouselView.swift in Sources */,
 				22CA4D782BFA1E16004F47E9 /* MoodsRow.swift in Sources */,
 				22FC89822BF9F807002E6400 /* AppViewModel.swift in Sources */,
 				229D2F2C2BF8FB3D0080C118 /* MessageCell.swift in Sources */,
+				22CA4DA12C0CC828004F47E9 /* MoodTimeLineItem.swift in Sources */,
+				22CA4D992C0B6806004F47E9 /* DayView.swift in Sources */,
 				229D2F382BF922A60080C118 /* PersistenceController.swift in Sources */,
 				229D2EF82BF7BF9A0080C118 /* CalendarWeekListView.swift in Sources */,
+				22CA4D952C0244FB004F47E9 /* StartButtonView.swift in Sources */,
+				22CA4DA32C0CCB16004F47E9 /* TimeInterval+Extension.swift in Sources */,
 				229D2F152BF8DFBC0080C118 /* Date+Extension.swift in Sources */,
 				22FC89792BF92E8B002E6400 /* EmojiShowerView.swift in Sources */,
 				22CA4D852C02082F004F47E9 /* AppleIdAuth.swift in Sources */,
+				22CA4D9B2C0CA543004F47E9 /* EditNoteView.swift in Sources */,
+				22CA4D9D2C0CA766004F47E9 /* FFButton.swift in Sources */,
 				229D2F122BF8DF930080C118 /* CalendarView.swift in Sources */,
 				229D2F062BF8D4720080C118 /* HomeView.swift in Sources */,
 				229D2F082BF8D4BE0080C118 /* HomeViewModel.swift in Sources */,
 				229D2EEA2BF7BF7D0080C118 /* moodjournalApp.swift in Sources */,
 				22FC89842BF9F8CF002E6400 /* User.swift in Sources */,
+				22CA4D8E2C024434004F47E9 /* OnoboardingPage.swift in Sources */,
 				22FC89862BF9F955002E6400 /* MoodItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -611,18 +705,19 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = moodjournal/moodjournal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"moodjournal/Preview Content\"";
 				DEVELOPMENT_TEAM = 64QDKH3589;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Mood Mate";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_FILE = moodjournal/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Feel Flow";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -643,18 +738,19 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = moodjournal/moodjournal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"moodjournal/Preview Content\"";
 				DEVELOPMENT_TEAM = 64QDKH3589;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Mood Mate";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_FILE = moodjournal/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Feel Flow";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

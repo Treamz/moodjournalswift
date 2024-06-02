@@ -27,27 +27,32 @@ struct SnapCarousel: View {
                     ScrollView(.horizontal) {
                         HStack(spacing: 35) {
                             ForEach(items.indices, id: \.self) { index in
-                                Circle()
-                                    .overlay {
-                                        Text(items[index])
-                                            .font(.system(size: 60))
-                                    }
-                                    .background(Color.red)
-                                    .frame(width: 70, height: 70)
-                                    .clipShape(.circle)
-                                    .shadow(color: .black.opacity(0.15), radius: 5, x: 5, y: 5)
-                                    .visualEffect { view, proxy in
-                                        view
-                                            .offset(y: offset(proxy))
-                                            .offset(y: scale(proxy) * 15)
-                                    }
-                                    .scrollTransition(.interactive, axis: .horizontal) { view, phase in
-                                        view
-                                            .scaleEffect(phase.isIdentity && activeID == index ? 1 : 1, anchor: .bottom)
-                                    }
-                                    .onTapGesture {
-                                        onDataChange(items[index])
-                                    }
+                                Button {
+                                    
+                                } label: {
+                                    Circle()
+                                        .overlay {
+                                            Text(items[index])
+                                                .font(.system(size: 60))
+                                        }
+                                        .background(Color.red)
+                                        .frame(width: 70, height: 70)
+                                        .clipShape(.circle)
+                                        .shadow(color: .black.opacity(0.15), radius: 5, x: 5, y: 5)
+                                        .visualEffect { view, proxy in
+                                            view
+                                                .offset(y: offset(proxy))
+                                                .offset(y: scale(proxy) * 15)
+                                        }
+                                        .scrollTransition(.interactive, axis: .horizontal) { view, phase in
+                                            view
+                                                .scaleEffect(phase.isIdentity && activeID == index ? 1 : 1, anchor: .bottom)
+                                        }
+                                        .onTapGesture {
+                                            onDataChange(items[index])
+                                        }
+                                }
+                                .buttonStyle(ScaleButtonStyle())
                             }
                         }
                         .frame(height: size.height)
@@ -107,4 +112,13 @@ struct SnapCarousel: View {
 enum TripPicker: String, CaseIterable {
     case scaled = "Scaled"
     case normal = "Normal"
+}
+
+
+struct ScaleButtonStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .scaleEffect(configuration.isPressed ? 1.4 : 1)
+            .animation(.linear(duration: 0.2), value: configuration.isPressed)
+    }
 }

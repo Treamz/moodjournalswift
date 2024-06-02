@@ -52,11 +52,11 @@ struct SettingsView: View {
     var body: some View {
         ZStack(alignment: .bottom) {
             Form {
-                Section("Header") {
-                    
-                }
-                
-                Section("Header") {
+//                Section("Header") {
+//                    
+//                }
+//                
+                Section() {
                     Picker(selection: $systemTheme) {
                                       ForEach(SchemeType.allCases) { item in
                                           Text(item.title)

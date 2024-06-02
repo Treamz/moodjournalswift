@@ -24,15 +24,21 @@ struct HomeView: View {
     
             MoodsRow(moods: viewModel.moods)
             Spacer()
-            SnapCarousel(onDataChange: { newData in
-                counter += 1
-                print("newData \(newData)")
-                Task {
-                    try await viewModel.addMood(forDate: selectedDay, mood: newData)
-                }
-            })
+          
 
                             
+        }
+        .overlay( alignment: .bottom) {
+            ZStack(alignment: .bottom) {
+                SnapCarousel(onDataChange: { newData in
+                    counter += 1
+                    print("newData \(newData)")
+                    Task {
+                        try await viewModel.addMood(forDate: selectedDay, mood: newData)
+                    }
+                })
+            }
+            .frame(height: 200)
         }
         .confettiCannon(counter: $counter,confettis: [.text("❤️"), .text("💙"), .text("💚"), .text("🧡")],confettiSize: 40,openingAngle: Angle(degrees: 0), closingAngle: Angle(degrees: 360), radius: 200)
         .onAppear {

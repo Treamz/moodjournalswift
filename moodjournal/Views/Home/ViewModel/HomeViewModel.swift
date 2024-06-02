@@ -26,7 +26,7 @@ class HomeViewModel : ObservableObject {
         }
         let newUUID = UUID().uuidString
         
-        let newItem = MoodItem(id: newUUID, title: mood, date: date.timeIntervalSince1970)
+        let newItem = MoodItem(id: newUUID, title: mood, date: date.timeIntervalSince1970, note: "")
         // Save to DB
         
         let db = Firestore.firestore()

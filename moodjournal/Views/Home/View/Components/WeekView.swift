@@ -14,7 +14,8 @@ struct WeekView: View {
     private let weekDayFormatter: DateFormatter
     
     @Binding var selectedDay: Date
-    
+    @Namespace var animation
+
     
     init(calendar: Calendar,selectedDay: Binding<Date>) {
         self.calendar = calendar
@@ -30,7 +31,9 @@ struct WeekView: View {
                             date: $selectedDay,
                             content: { date in
                                 Button(action: {
-                                    selectedDay = date
+                                    withAnimation {
+                                        selectedDay = date
+                                    }
                                     
                                 }) {
                                     VStack(spacing: 10) {
@@ -55,6 +58,8 @@ struct WeekView: View {
                                             if calendar.isDate(date, inSameDayAs: selectedDay) {
                                                 Capsule()
                                                     .fill(Color.black)
+                                                    .matchedGeometryEffect(id: "CURRENTDAY", in: animation)
+
                                             }
                                         }
                                     )

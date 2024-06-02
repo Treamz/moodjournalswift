@@ -10,13 +10,14 @@ import FirebaseCore
 @main
 struct moodjournalApp: App {
 //    @StateObject var viewModel = AppViewModel()
-
+//    @AppStorage("isOnboarding") var isOnboarding: Bool = true
     let persistenceController = PersistenceController.shared
     @StateObject var networkMonitor = NetworkMonitor()
     init() {
         if !isPreview {
             FirebaseApp.configure()
         }
+        //isOnboarding = true
     }
     var body: some Scene {
         WindowGroup {

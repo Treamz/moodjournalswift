@@ -17,7 +17,6 @@ struct CalendarWeekListView<Day: View, Header:View,Title:View, WeekSwitcher:View
     
     private let daysInWeek = 7
 
-
     init(
         calendar: Calendar,
         date: Binding<Date>,
