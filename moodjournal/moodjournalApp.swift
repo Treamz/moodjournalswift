@@ -9,14 +9,16 @@ import SwiftUI
 import FirebaseCore
 @main
 struct moodjournalApp: App {
-//    @StateObject var viewModel = AppViewModel()
-//    @AppStorage("isOnboarding") var isOnboarding: Bool = true
     let persistenceController = PersistenceController.shared
     @StateObject var networkMonitor = NetworkMonitor()
+    
+    @StateObject var authManager: AuthManager
+
     init() {
-        if !isPreview {
-            FirebaseApp.configure()
-        }
+    
+        FirebaseApp.configure()
+        let authManager = AuthManager()
+        _authManager = StateObject(wrappedValue: authManager)
         //isOnboarding = true
     }
     var body: some Scene {
@@ -24,6 +26,7 @@ struct moodjournalApp: App {
             ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
                 .environmentObject(networkMonitor)
+                .environmentObject(authManager)
         }
     }
 }

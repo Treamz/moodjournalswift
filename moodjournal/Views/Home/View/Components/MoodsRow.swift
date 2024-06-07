@@ -23,15 +23,6 @@ struct MoodsRow: View {
         ScrollView{
             LazyVStack() {
                       ForEach(Array(moods.reversed().enumerated()), id: \.offset) { index, mood in
-//                          Text(mood.title)
-////                              .background(Color.red)
-//                              .frame(width: 50, height: 50, alignment: .center)
-//                              .font(.system(size: 50))
-//                              .transition(.scale)
-//                              .onTapGesture {
-//                                  isPresentingMood = mood
-//                              }
-//                          
                           MoodTimeLineItem(item: mood)
                               .onTapGesture {
                                                                     isPresentingMood = mood

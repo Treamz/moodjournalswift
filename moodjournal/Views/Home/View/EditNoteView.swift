@@ -9,6 +9,8 @@ import SwiftUI
 
 
 struct EditNoteView: View {
+    @EnvironmentObject private var homeViewModel: HomeViewModel
+    
     @Environment(\.dismiss) private var dismiss // moved dismiss functionality here
 
     @StateObject var viewModel: EditNoteViewModel
@@ -19,6 +21,17 @@ struct EditNoteView: View {
     var currentItem : MoodItem
     
     @State private var title: String = "234234"
+    
+    
+    enum FocusField: Hashable {
+        case field
+    }
+
+
+
+    
+    @FocusState private var focusedField: FocusField?
+
     
     
     init(currentItem: MoodItem, newItemPresented: Binding<Bool>) {
@@ -39,15 +52,20 @@ struct EditNoteView: View {
             Text(currentItem.id)
             Text(currentItem.note ?? "Empty")
             TextField("Note", text: $viewModel.note,axis: .vertical)
-//                    .lineLimit(5...10)
+                    .lineLimit(5...20)
+                    .focused($focusedField, equals: .field)
                 .textFieldStyle(DefaultTextFieldStyle())
             Spacer()
             FFButton(title: "Update", background: .black) {
                 Task {
                     try await viewModel.save()
+                    await homeViewModel.getMoodByDate(byDate: homeViewModel.dueDate)
                     dismiss()
                 }
             }
+        }
+        .onAppear {
+            self.focusedField = .field
         }
         .padding()
     }

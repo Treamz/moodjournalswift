@@ -24,8 +24,6 @@ struct HomeView: View {
     
             MoodsRow(moods: viewModel.moods)
             Spacer()
-          
-
                             
         }
         .overlay( alignment: .bottom) {
@@ -34,7 +32,8 @@ struct HomeView: View {
                     counter += 1
                     print("newData \(newData)")
                     Task {
-                        try await viewModel.addMood(forDate: selectedDay, mood: newData)
+                    
+                        try await viewModel.addMood(forDate: isToday(date: selectedDay) ? .now : selectedDay, mood: newData)
                     }
                 })
             }
@@ -52,8 +51,14 @@ struct HomeView: View {
                 await viewModel.getMoodByDate(byDate: selectedDay)
             }
         }
+        .environmentObject(viewModel)
     }
     
+    
+    func isToday(date: Date) -> Bool {
+            let calendar = Calendar.current
+            return calendar.isDateInToday(date)
+        }
 }
 
 #Preview {

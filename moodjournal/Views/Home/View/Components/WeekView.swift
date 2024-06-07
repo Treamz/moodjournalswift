@@ -51,16 +51,25 @@ struct WeekView: View {
                                         
                                     }
                                     .foregroundStyle(calendar.isDate(date, inSameDayAs: selectedDay) ? .primary : .secondary)
-                                    .foregroundColor(calendar.isDate(date, inSameDayAs: selectedDay) ? .white : .black)
+                                    .foregroundColor(calendar.isDate(date, inSameDayAs: selectedDay) ? .white : Color("CurrentDay"))
                                     .frame(width: 45, height: 90)
                                     .background(
                                         ZStack {
+                                            if calendar.isDate(date, inSameDayAs: .now) {
+                                                Capsule()
+                                                    .fill(.white)
+                                                    .overlay(
+                                                            RoundedRectangle(cornerRadius: 20)
+                                                                .stroke(Color("Today"), lineWidth: 2)
+                                                        )
+                                            }
                                             if calendar.isDate(date, inSameDayAs: selectedDay) {
                                                 Capsule()
-                                                    .fill(Color.black)
+                                                    .fill(Color("CurrentDayBackground"))
                                                     .matchedGeometryEffect(id: "CURRENTDAY", in: animation)
 
                                             }
+                                
                                         }
                                     )
                                 }
@@ -135,5 +144,5 @@ private extension DateFormatter {
 
 
 #Preview {
-    WeekView(calendar: Calendar(identifier:.gregorian),selectedDay: .constant(.now))
+    WeekView(calendar: Calendar(identifier:.gregorian),selectedDay: .constant(Calendar.current.date(byAdding: .day, value: -1, to: Date()) ?? .now))
 }

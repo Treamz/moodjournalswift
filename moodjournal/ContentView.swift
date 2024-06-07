@@ -28,6 +28,9 @@ struct ContentView: View {
                
            }
        }
+    
+    @EnvironmentObject var authManager: AuthManager
+
 
     var body: some View {
         Group {
@@ -35,13 +38,8 @@ struct ContentView: View {
                 OnBoardingView()
             } else {
                 Group {
-                    if (viewModel.userSession == nil) {
-                       Text("Not Loaded")
-                            .onAppear {
-                                Task {
-                                    try await viewModel.signIn()
-                                }
-                            }
+                    if (authManager.authState == .signedOut) {
+                        LoginView()
                     }
                     else {
                         TabView {
@@ -66,12 +64,13 @@ struct ContentView: View {
                                     
                                 }
                         }
-                        .tint(.orange)
+                        .tint(Color("Tint"))
                        
                     }
                 }
             }
         }
+        .background(Color("Background"))
         .preferredColorScheme(selectedScheme)
         
 

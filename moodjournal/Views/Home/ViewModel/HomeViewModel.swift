@@ -45,6 +45,7 @@ class HomeViewModel : ObservableObject {
     func getMoodByDate(byDate date: Date) async {
         guard let userId = Auth.auth().currentUser?.uid else {return}
 //        let calendar = /*Calendar*/.current
+        dueDate = date
         let currentDate = date
         
         let startOfDay = currentDate.startOfDay

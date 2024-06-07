@@ -9,20 +9,30 @@ import SwiftUI
 
 struct MoodTimeLineItem: View {
     let item  : MoodItem
+    
+    var timeString = ""
+    init(item: MoodItem) {
+        self.item = item
+        let date = Date(timeIntervalSince1970: item.date)
+        let dateFormatter = DateFormatter()
+
+        dateFormatter.timeStyle = .medium
+        timeString = dateFormatter.string(from:date)
+    }
     var body: some View {
         HStack(alignment: .top,spacing: 30) {
             VStack(spacing: 10) {
                 Circle()
-                    .fill(.black)
+                    .fill(Color("Background"))
                     .frame(width: 15,height: 15)
                     .background(
                         Circle()
-                            .stroke(.black,lineWidth: 1)
+                            .stroke(Color("Background"),lineWidth: 1)
                             .padding(-3)
                     )
                 
                 Rectangle()
-                    .fill(.black)
+                    .fill(Color("Background"))
                     .frame(width: 3)
             }
             .offset(x: 5,y: 5)
@@ -31,7 +41,7 @@ struct MoodTimeLineItem: View {
                 HStack {
                     Text(item.title)
                     Spacer()
-                    Text(item.date.stringFormatted())
+                    Text(timeString)
                         .font(.system(size: 14))
                 }
                 .font(.title)
@@ -43,9 +53,18 @@ struct MoodTimeLineItem: View {
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding()
-            .background(Color(.black).cornerRadius(15))
+            .background(Color("Background").cornerRadius(15))
         }
         .frame(maxWidth: .infinity, alignment: .leading)
+        .onAppear {
+//            var date = Date(timeIntervalSince1970: item.date)
+//            let dateFormatter = DateFormatter()
+//
+//            dateFormatter.timeStyle = .medium
+//            let timeString = dateFormatter.string(from:date)
+//
+//            print("DATE: \(timeString)")
+        }
     }
 }
 

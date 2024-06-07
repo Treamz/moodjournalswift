@@ -69,7 +69,7 @@ struct SettingsView: View {
 //                    AppleIdAuth()
                 }
             }
-            Text("Version 1.0.0")
+            Text("Version \(UIApplication.version)")
         }
         .preferredColorScheme(selectedScheme)
 
