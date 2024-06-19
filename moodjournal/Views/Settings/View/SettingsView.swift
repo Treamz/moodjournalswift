@@ -34,7 +34,12 @@ struct SettingsView: View {
 
     @Environment(\.colorScheme) private var colorScheme;
     
+    @EnvironmentObject var authManager: AuthManager
     
+    @State private var isOn = false
+
+    @StateObject private var viewModel: SettingsViewModel = SettingsViewModel()
+
     var selectedScheme: ColorScheme? {
            guard let theme = SchemeType(rawValue: systemTheme) else { return nil }
            switch theme {
@@ -67,6 +72,18 @@ struct SettingsView: View {
                                   }
                    
 //                    AppleIdAuth()
+                    Toggle("Notifications", isOn: $viewModel.isAuthorized)
+                                   .toggleStyle(SwitchToggleStyle(tint: .red))
+                                   .onChange(of: viewModel.isAuthorized) { newValue in
+                                       if newValue {
+                                           viewModel.requestNotificationAuthorization()
+                                       }
+                                   }
+                    Button("Sign out") {
+                        Task {
+                            try await authManager.signOut()
+                        }
+                    }
                 }
             }
             Text("Version \(UIApplication.version)")

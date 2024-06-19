@@ -4,7 +4,7 @@ struct MoodCarousel: View {
     
     var onDataChange: (String) -> Void
 
-    private let items = ["😡", "😞", "😐", "🙂", "😊", "😁"]
+    private let items = ["camera", "😡", "😞", "😐", "🙂", "😊", "😁"]
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {

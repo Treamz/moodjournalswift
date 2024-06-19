@@ -7,9 +7,7 @@
 
 import SwiftUI
 import ConfettiSwiftUI
-import FirebaseFirestoreSwift
-import FirebaseFirestore
-import Firebase
+
 
 struct HomeView: View {
     @State private var selectedDay = Self.now
@@ -17,7 +15,8 @@ struct HomeView: View {
     @State private var startShower = false
     @State private var counter: Int = 0
     @StateObject var viewModel: HomeViewModel = HomeViewModel()
-  
+    @State private var isPresentedCamera = false
+
     var body: some View {
         VStack {
             WeekView(calendar: Calendar(identifier: .gregorian), selectedDay: $selectedDay)
@@ -27,19 +26,27 @@ struct HomeView: View {
                             
         }
         .overlay( alignment: .bottom) {
-            ZStack(alignment: .bottom) {
-                SnapCarousel(onDataChange: { newData in
-                    counter += 1
-                    print("newData \(newData)")
-                    Task {
-                    
-                        try await viewModel.addMood(forDate: isToday(date: selectedDay) ? .now : selectedDay, mood: newData)
-                    }
-                })
+            if isToday(date: selectedDay) {
+                ZStack(alignment: .bottom) {
+                    SnapCarousel(onDataChange: { newData in
+                        counter += 1
+                        print("newData \(newData)")
+                        if(newData == "camera") {
+                            isPresentedCamera.toggle()
+                        } else {
+                            Task {
+                                try await viewModel.addMood(forDate: isToday(date: selectedDay) ? .now : selectedDay, mood: newData)
+                            }
+                        }
+                       
+                    })
+                }
+                .frame(height: 200)
             }
-            .frame(height: 200)
         }
-        .confettiCannon(counter: $counter,confettis: [.text("❤️"), .text("💙"), .text("💚"), .text("🧡")],confettiSize: 40,openingAngle: Angle(degrees: 0), closingAngle: Angle(degrees: 360), radius: 200)
+        .fullScreenCover(isPresented: $isPresentedCamera) {
+            EmoteCameraView()
+        }
         .onAppear {
             Task {
                 await viewModel.getMoodByDate(byDate: selectedDay)

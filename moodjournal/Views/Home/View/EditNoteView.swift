@@ -33,7 +33,8 @@ struct EditNoteView: View {
     @FocusState private var focusedField: FocusField?
 
     
-    
+    var timeString = ""
+
     init(currentItem: MoodItem, newItemPresented: Binding<Bool>) {
 
         self.currentItem = currentItem
@@ -44,13 +45,22 @@ struct EditNoteView: View {
 //        let date = currentItem.wrappedValue.date
 //        let note = currentItem.wrappedValue.note
         _viewModel = StateObject(wrappedValue: EditNoteViewModel(moodItem:currentItem))
+        
+        let date = Date(timeIntervalSince1970: currentItem.date)
+        let dateFormatter = DateFormatter()
+
+        dateFormatter.timeStyle = .medium
+        timeString = dateFormatter.string(from:date)
     }
     
 
     var body: some View {
         VStack {
-            Text(currentItem.id)
-            Text(currentItem.note ?? "Empty")
+            HStack {
+                Text(currentItem.title)
+                Spacer()
+                Text(timeString)
+            }
             TextField("Note", text: $viewModel.note,axis: .vertical)
                     .lineLimit(5...20)
                     .focused($focusedField, equals: .field)

@@ -11,6 +11,10 @@ struct MoodTimeLineItem: View {
     let item  : MoodItem
     
     var timeString = ""
+    
+    @State private var shouldShowMenu = true
+    @EnvironmentObject private var homeViewModel: HomeViewModel
+
     init(item: MoodItem) {
         self.item = item
         let date = Date(timeIntervalSince1970: item.date)
@@ -53,7 +57,18 @@ struct MoodTimeLineItem: View {
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding()
-            .background(Color("Background").cornerRadius(15))
+            .background(Color("Background")
+            .cornerRadius(15))
+            .contentShape(.contextMenuPreview, RoundedRectangle(cornerRadius: 15))
+            .contextMenu(shouldShowMenu ? ContextMenu {
+                    Button {
+                        Task {
+                            await homeViewModel.deleteMood(mood: item)
+                        }
+                    } label: {
+                        Label("Delete", systemImage: "delete.left")
+                    }
+            } : nil)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .onAppear {
@@ -66,6 +81,7 @@ struct MoodTimeLineItem: View {
 //            print("DATE: \(timeString)")
         }
     }
+    
 }
 
 //#Preview {

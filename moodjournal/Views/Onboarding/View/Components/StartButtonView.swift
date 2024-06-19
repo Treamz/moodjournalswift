@@ -39,6 +39,17 @@ struct StartButtonView: View {
           )
         } //: BUTTON
         .accentColor(Color.white)
+        .onAppear {
+            NotificationService.shared.requestNotification { result in
+                switch result {
+                case .success(_):
+                    NotificationService.shared.scheduleNotification()
+                case .failure(_):
+                    return
+                    //
+                }
+            }
+        }
         
     }
     

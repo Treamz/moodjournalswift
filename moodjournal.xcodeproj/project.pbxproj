@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		229D2EEA2BF7BF7D0080C118 /* moodjournalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229D2EE92BF7BF7D0080C118 /* moodjournalApp.swift */; };
-		229D2EEC2BF7BF7D0080C118 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229D2EEB2BF7BF7D0080C118 /* ContentView.swift */; };
+		229D2EEC2BF7BF7D0080C118 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229D2EEB2BF7BF7D0080C118 /* AppView.swift */; };
 		229D2EEE2BF7BF7F0080C118 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 229D2EED2BF7BF7F0080C118 /* Assets.xcassets */; };
 		229D2EF12BF7BF7F0080C118 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 229D2EF02BF7BF7F0080C118 /* Preview Assets.xcassets */; };
 		229D2EF82BF7BF9A0080C118 /* CalendarWeekListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229D2EF72BF7BF9A0080C118 /* CalendarWeekListView.swift */; };
@@ -59,11 +59,19 @@
 		22CA4DAC2C10C2F9004F47E9 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 22CA4DAB2C10C2F9004F47E9 /* GoogleSignIn */; };
 		22CA4DAE2C10C2F9004F47E9 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 22CA4DAD2C10C2F9004F47E9 /* GoogleSignInSwift */; };
 		22CA4DB02C10C368004F47E9 /* GoogleSignInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CA4DAF2C10C368004F47E9 /* GoogleSignInManager.swift */; };
-		22CA4DB22C10C392004F47E9 /* :AuthManager-DeleteAccount.swift .swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CA4DB12C10C392004F47E9 /* :AuthManager-DeleteAccount.swift .swift */; };
+		22CA4DB22C10C392004F47E9 /* AuthManager-DeleteAccount.swift .swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CA4DB12C10C392004F47E9 /* AuthManager-DeleteAccount.swift .swift */; };
 		22CA4DB42C10C3A7004F47E9 /* AppleSignInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CA4DB32C10C3A7004F47E9 /* AppleSignInManager.swift */; };
 		22CA4DB92C10DE5C004F47E9 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CA4DB82C10DE5C004F47E9 /* AuthView.swift */; };
 		22CA4DBC2C10E61C004F47E9 /* Particle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CA4DBB2C10E61C004F47E9 /* Particle.swift */; };
 		22CA4DBE2C10E62A004F47E9 /* ParticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CA4DBD2C10E62A004F47E9 /* ParticleView.swift */; };
+		22CD20502C1AFDC200F4B04C /* HapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CD204F2C1AFDC200F4B04C /* HapticFeedback.swift */; };
+		22CD20532C1B123F00F4B04C /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CD20522C1B123F00F4B04C /* NotificationService.swift */; };
+		22CD20562C1B1C3100F4B04C /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CD20552C1B1C3100F4B04C /* SettingsViewModel.swift */; };
+		22CD207E2C207F4600F4B04C /* EmoteCameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CD207D2C207F4600F4B04C /* EmoteCameraController.swift */; };
+		22CD20802C20806B00F4B04C /* EmoteCameraViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CD207F2C20806B00F4B04C /* EmoteCameraViewWrapper.swift */; };
+		22CD20822C2080FF00F4B04C /* EmoteCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CD20812C2080FF00F4B04C /* EmoteCameraView.swift */; };
+		22CD20882C231B8C00F4B04C /* EmotionClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 22CD20872C231B8C00F4B04C /* EmotionClassifier.mlmodel */; };
+		22CD208A2C232DA200F4B04C /* EmotionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CD20892C232DA200F4B04C /* EmotionService.swift */; };
 		22FC89792BF92E8B002E6400 /* EmojiShowerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FC89782BF92E8B002E6400 /* EmojiShowerView.swift */; };
 		22FC897B2BF92EA9002E6400 /* EmojiShowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FC897A2BF92EA9002E6400 /* EmojiShowerViewController.swift */; };
 		22FC897E2BF93033002E6400 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 22FC897D2BF93033002E6400 /* ConfettiSwiftUI */; };
@@ -75,7 +83,7 @@
 /* Begin PBXFileReference section */
 		229D2EE62BF7BF7D0080C118 /* moodjournal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moodjournal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		229D2EE92BF7BF7D0080C118 /* moodjournalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moodjournalApp.swift; sourceTree = "<group>"; };
-		229D2EEB2BF7BF7D0080C118 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		229D2EEB2BF7BF7D0080C118 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		229D2EED2BF7BF7F0080C118 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		229D2EF02BF7BF7F0080C118 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		229D2EF72BF7BF9A0080C118 /* CalendarWeekListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarWeekListView.swift; sourceTree = "<group>"; };
@@ -118,11 +126,19 @@
 		22CA4DA62C0F84D8004F47E9 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		22CA4DA82C10C280004F47E9 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		22CA4DAF2C10C368004F47E9 /* GoogleSignInManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInManager.swift; sourceTree = "<group>"; };
-		22CA4DB12C10C392004F47E9 /* :AuthManager-DeleteAccount.swift .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ":AuthManager-DeleteAccount.swift .swift"; sourceTree = "<group>"; };
+		22CA4DB12C10C392004F47E9 /* AuthManager-DeleteAccount.swift .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthManager-DeleteAccount.swift .swift"; sourceTree = "<group>"; };
 		22CA4DB32C10C3A7004F47E9 /* AppleSignInManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignInManager.swift; sourceTree = "<group>"; };
 		22CA4DB82C10DE5C004F47E9 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		22CA4DBB2C10E61C004F47E9 /* Particle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Particle.swift; sourceTree = "<group>"; };
 		22CA4DBD2C10E62A004F47E9 /* ParticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticleView.swift; sourceTree = "<group>"; };
+		22CD204F2C1AFDC200F4B04C /* HapticFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedback.swift; sourceTree = "<group>"; };
+		22CD20522C1B123F00F4B04C /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		22CD20552C1B1C3100F4B04C /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		22CD207D2C207F4600F4B04C /* EmoteCameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmoteCameraController.swift; sourceTree = "<group>"; };
+		22CD207F2C20806B00F4B04C /* EmoteCameraViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmoteCameraViewWrapper.swift; sourceTree = "<group>"; };
+		22CD20812C2080FF00F4B04C /* EmoteCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmoteCameraView.swift; sourceTree = "<group>"; };
+		22CD20872C231B8C00F4B04C /* EmotionClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = EmotionClassifier.mlmodel; sourceTree = "<group>"; };
+		22CD20892C232DA200F4B04C /* EmotionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionService.swift; sourceTree = "<group>"; };
 		22FC89782BF92E8B002E6400 /* EmojiShowerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiShowerView.swift; sourceTree = "<group>"; };
 		22FC897A2BF92EA9002E6400 /* EmojiShowerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiShowerViewController.swift; sourceTree = "<group>"; };
 		22FC89812BF9F807002E6400 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
@@ -175,12 +191,14 @@
 				22CA4D872C02362B004F47E9 /* Info.plist */,
 				22CA4D862C020DCE004F47E9 /* moodjournal.entitlements */,
 				229D2EE92BF7BF7D0080C118 /* moodjournalApp.swift */,
+				22CD204E2C1AFDB400F4B04C /* Extension */,
 				229D2F012BF8D2830080C118 /* Core */,
-				229D2EEB2BF7BF7D0080C118 /* ContentView.swift */,
 				229D2EFC2BF8D2340080C118 /* Helpers */,
 				229D2EFB2BF8D2240080C118 /* Views */,
 				229D2EF92BF8D2190080C118 /* Models */,
+				22CD20512C1B123000F4B04C /* Service */,
 				229D2EED2BF7BF7F0080C118 /* Assets.xcassets */,
+				22CD20872C231B8C00F4B04C /* EmotionClassifier.mlmodel */,
 				229D2F1D2BF8F9CD0080C118 /* GoogleService-Info.plist */,
 				229D2EEF2BF7BF7F0080C118 /* Preview Content */,
 			);
@@ -209,6 +227,7 @@
 		229D2EFB2BF8D2240080C118 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				22CD207C2C207F3000F4B04C /* EmoteCamera */,
 				22CA4DB52C10DE16004F47E9 /* Auth */,
 				22CA4D962C0B67F5004F47E9 /* Day */,
 				22CA4D882C0243C9004F47E9 /* Onboarding */,
@@ -294,6 +313,7 @@
 		229D2F092BF8D5320080C118 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				22CD20542C1B1C2500F4B04C /* ViewModel */,
 				229D2F0A2BF8D5390080C118 /* View */,
 			);
 			path = Settings;
@@ -467,7 +487,7 @@
 		22CA4DB72C10DE36004F47E9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				22CA4DB12C10C392004F47E9 /* :AuthManager-DeleteAccount.swift .swift */,
+				22CA4DB12C10C392004F47E9 /* AuthManager-DeleteAccount.swift .swift */,
 				22CA4DB32C10C3A7004F47E9 /* AppleSignInManager.swift */,
 				22CA4DA82C10C280004F47E9 /* AuthManager.swift */,
 				22CA4DAF2C10C368004F47E9 /* GoogleSignInManager.swift */,
@@ -484,6 +504,41 @@
 			path = Particle;
 			sourceTree = "<group>";
 		};
+		22CD204E2C1AFDB400F4B04C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				22CD204F2C1AFDC200F4B04C /* HapticFeedback.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		22CD20512C1B123000F4B04C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				22CD20522C1B123F00F4B04C /* NotificationService.swift */,
+				22CD20892C232DA200F4B04C /* EmotionService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		22CD20542C1B1C2500F4B04C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				22CD20552C1B1C3100F4B04C /* SettingsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		22CD207C2C207F3000F4B04C /* EmoteCamera */ = {
+			isa = PBXGroup;
+			children = (
+				22CD207D2C207F4600F4B04C /* EmoteCameraController.swift */,
+				22CD207F2C20806B00F4B04C /* EmoteCameraViewWrapper.swift */,
+				22CD20812C2080FF00F4B04C /* EmoteCameraView.swift */,
+			);
+			path = EmoteCamera;
+			sourceTree = "<group>";
+		};
 		22FC89772BF92E77002E6400 /* EmojiShower */ = {
 			isa = PBXGroup;
 			children = (
@@ -496,6 +551,7 @@
 		22FC897F2BF9F7F3002E6400 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				229D2EEB2BF7BF7D0080C118 /* AppView.swift */,
 				22FC89802BF9F7F8002E6400 /* AppViewModel */,
 			);
 			path = App;
@@ -599,19 +655,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22CD208A2C232DA200F4B04C /* EmotionService.swift in Sources */,
 				22CA4D762BF9FF47004F47E9 /* Encodable.swift in Sources */,
 				22CA4D822BFA73D8004F47E9 /* EmojiItem.swift in Sources */,
 				229D2F362BF9228A0080C118 /* NetworkUnavailableView.swift in Sources */,
 				22CA4D8B2C0243FB004F47E9 /* OnboardingView.swift in Sources */,
 				22CA4D9F2C0CAE15004F47E9 /* EditNoteViewModel.swift in Sources */,
 				229D2F0C2BF8D5420080C118 /* SettingsView.swift in Sources */,
+				22CD20882C231B8C00F4B04C /* EmotionClassifier.mlmodel in Sources */,
 				22CA4D7E2BFA2F59004F47E9 /* DayItem.swift in Sources */,
 				229D2F042BF8D2AF0080C118 /* WeekView.swift in Sources */,
-				22CA4DB22C10C392004F47E9 /* :AuthManager-DeleteAccount.swift .swift in Sources */,
+				22CA4DB22C10C392004F47E9 /* AuthManager-DeleteAccount.swift .swift in Sources */,
 				22CA4D7B2BFA2C64004F47E9 /* CalendarViewModel.swift in Sources */,
 				229D2F0E2BF8D7FB0080C118 /* MoodCarousel.swift in Sources */,
 				229D2F322BF90EBA0080C118 /* Message.xcdatamodeld in Sources */,
-				229D2EEC2BF7BF7D0080C118 /* ContentView.swift in Sources */,
+				229D2EEC2BF7BF7D0080C118 /* AppView.swift in Sources */,
 				22CA4DBC2C10E61C004F47E9 /* Particle.swift in Sources */,
 				229D2F192BF8F7ED0080C118 /* ChatView.swift in Sources */,
 				22CA4D922C02447B004F47E9 /* OnboardingCardView.swift in Sources */,
@@ -636,15 +694,21 @@
 				22CA4DBE2C10E62A004F47E9 /* ParticleView.swift in Sources */,
 				22CA4DA32C0CCB16004F47E9 /* TimeInterval+Extension.swift in Sources */,
 				229D2F152BF8DFBC0080C118 /* Date+Extension.swift in Sources */,
+				22CD20502C1AFDC200F4B04C /* HapticFeedback.swift in Sources */,
 				22FC89792BF92E8B002E6400 /* EmojiShowerView.swift in Sources */,
 				22CA4D852C02082F004F47E9 /* AppleIdAuth.swift in Sources */,
+				22CD20802C20806B00F4B04C /* EmoteCameraViewWrapper.swift in Sources */,
+				22CD20822C2080FF00F4B04C /* EmoteCameraView.swift in Sources */,
 				22CA4D9B2C0CA543004F47E9 /* EditNoteView.swift in Sources */,
 				22CA4D9D2C0CA766004F47E9 /* FFButton.swift in Sources */,
 				229D2F122BF8DF930080C118 /* CalendarView.swift in Sources */,
+				22CD20532C1B123F00F4B04C /* NotificationService.swift in Sources */,
 				229D2F062BF8D4720080C118 /* HomeView.swift in Sources */,
 				22CA4DA72C0F84D8004F47E9 /* UIApplication.swift in Sources */,
 				229D2F082BF8D4BE0080C118 /* HomeViewModel.swift in Sources */,
+				22CD20562C1B1C3100F4B04C /* SettingsViewModel.swift in Sources */,
 				229D2EEA2BF7BF7D0080C118 /* moodjournalApp.swift in Sources */,
+				22CD207E2C207F4600F4B04C /* EmoteCameraController.swift in Sources */,
 				22FC89842BF9F8CF002E6400 /* User.swift in Sources */,
 				22CA4D8E2C024434004F47E9 /* OnoboardingPage.swift in Sources */,
 				22FC89862BF9F955002E6400 /* MoodItem.swift in Sources */,
@@ -780,13 +844,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = moodjournal/moodjournal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_ASSET_PATHS = "\"moodjournal/Preview Content\"";
 				DEVELOPMENT_TEAM = 64QDKH3589;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = moodjournal/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Feel Flow";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Detect user emotion";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -797,7 +862,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.treamz.moodjournal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -813,13 +878,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = moodjournal/moodjournal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_ASSET_PATHS = "\"moodjournal/Preview Content\"";
 				DEVELOPMENT_TEAM = 64QDKH3589;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = moodjournal/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Feel Flow";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Detect user emotion";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -830,7 +896,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.treamz.moodjournal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

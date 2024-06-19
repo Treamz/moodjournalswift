@@ -6,16 +6,18 @@
 //
 
 import SwiftUI
-
+import ConfettiSwiftUI
 struct SnapCarousel: View {
     var onDataChange: (String) -> Void
 
     @State private var activeID: Int? = 3
     
     @State private var name = "happy"
-    
+    @State private var counter: Int = 0
+
 
     private let moods: [Mood] = [
+        Mood(emoji: "camera", name: "camera"),
         Mood(emoji: "😡", name: "angry"),
         Mood(emoji: "😠", name: "annoyed"),
         Mood(emoji: "😤", name: "frustrated"),
@@ -87,8 +89,14 @@ struct SnapCarousel: View {
                                 } label: {
                                     Circle()
                                         .overlay {
-                                            Text(moods[index].emoji)
-                                                .font(.system(size: 60))
+                                            if moods[index].emoji == "camera" {
+                                                Circle()
+                                                    .stroke(.white, lineWidth: 6)
+                                            } else {
+                                                Text(moods[index].emoji)
+                                                    .font(.system(size: 60))
+                                            }
+                                           
                                         }
                                         .background(Color.red)
                                         .frame(width: 70, height: 70)
@@ -103,7 +111,8 @@ struct SnapCarousel: View {
                                             view
                                                 .scaleEffect(phase.isIdentity && activeID == index ? 1 : 1, anchor: .bottom)
                                         }
-                                        .onTapGesture {
+                                        .onTapGesture(.medium) {
+                                            counter += 1
                                             onDataChange(moods[index].emoji)
                                         }
                                 }

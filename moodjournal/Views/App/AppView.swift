@@ -7,7 +7,7 @@
 
 import SwiftUI
 import FirebaseAuth
-struct ContentView: View {
+struct AppView: View {
     @AppStorage("isOnboarding") var isOnboarding: Bool = true
 
     @StateObject var viewModel = AppViewModel()
@@ -72,6 +72,9 @@ struct ContentView: View {
         }
         .background(Color("Background"))
         .preferredColorScheme(selectedScheme)
+        .onAppear {
+            UIApplication.shared.applicationIconBadgeNumber = 0
+        }
         
 
 
@@ -79,5 +82,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    AppView()
 }

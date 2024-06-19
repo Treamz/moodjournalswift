@@ -42,6 +42,8 @@ class HomeViewModel : ObservableObject {
         }
     }
     
+    
+    @MainActor
     func getMoodByDate(byDate date: Date) async {
         guard let userId = Auth.auth().currentUser?.uid else {return}
 //        let calendar = /*Calendar*/.current
@@ -72,4 +74,16 @@ class HomeViewModel : ObservableObject {
             }
     }
     
+    
+    func deleteMood(mood: MoodItem) async {
+        guard let userId = Auth.auth().currentUser?.uid else {return}
+
+        do {
+            try await db.collection("users").document(userId).collection("moods").document(mood.id).delete()
+            await getMoodByDate(byDate: dueDate)
+        }
+        catch {
+            print("DEBUG: Error delete mood")
+        }
+    }
 }
